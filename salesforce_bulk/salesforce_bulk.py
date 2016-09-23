@@ -224,7 +224,7 @@ class SalesforceBulk(object):
                 "query")
         http = Http()
         uri = self.endpoint + "/job/%s/batch" % job_id
-        headers = self.headers({"Content-Type": "text/csv"})
+        headers = self.headers({"Content-Type": "application/json"})
         resp, content = http.request(uri, method="POST", body=soql,
                                      headers=headers)
 
